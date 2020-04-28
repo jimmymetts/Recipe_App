@@ -9,8 +9,10 @@ const APP_ID = '0792501f';
 const APP_KEY = 'fdf070695e8df1f0fe225dd600e33d00';
 const exampleReq = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
 
-useEffect(() => {
+const [counter, setCounter] = useState(0);
 
+useEffect(() => {
+  console.log('Effect has been run');
 });
   return () => {
     cleanup
