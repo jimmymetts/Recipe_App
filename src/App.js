@@ -1,4 +1,4 @@
-import React, {useEfect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,20 +14,21 @@ const [counter, setCounter] = useState(0);
 useEffect(() => {
   console.log('Effect has been run');
 });
-  return () => {
-    cleanup
-  }
-}, [input])
+ 
+ 
+
 
   return (
     <div className="App">
       <form className="search-form">
         <input className="search-bar" type="text"/>
-        <button className="search-button"
-        type="submit">Search</button>
+        <button onClick={() => setCounter(counter + 1)}className="search-button"
+        type="submit">
+          {counter}
+        </button>
       </form>
     </div>
   );
-};
+};t 
 
 export default App;
