@@ -29,6 +29,6 @@ useEffect(() => {
       </form>
     </div>
   );
-};t 
+}; 
 
 export default App;
