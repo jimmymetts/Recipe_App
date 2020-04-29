@@ -7,16 +7,19 @@ const App = () => {
 
 const APP_ID = '0792501f';
 const APP_KEY = 'fdf070695e8df1f0fe225dd600e33d00';
-const exampleReq = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
 
-const [counter, setCounter] = useState(0);
+const [recipes, setRecipes] = useState([]);
 
-useEffect(() => {
-  console.log('Effect has been run');
-}, [counter]);  //added counter to array for 2nd argument - useEffect will run each time counter is clicked
+
+useEffect( () => {
+  getRecipes();
+}, []);  
  
- 
-
+const getRecipes = async () => {
+  const response = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`)
+  const data = await response.json();
+  setRecipes(data.hits);
+}
 
   return (
     <div className="App">
@@ -26,7 +29,7 @@ useEffect(() => {
           
        
       </form>
-      <h1 onClick={() => setCounter(counter + 1)}>{counter}</h1>
+      
     </div>
   );
 }; 
