@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Recipe = () => {
+const Recipe = (title, calories, image) => {
     return(
         <div>
             <h1>Title</h1>
@@ -11,3 +11,5 @@ const Recipe = () => {
         </div>
     );
 }
+
+export default Recipe;
