@@ -13,7 +13,7 @@ const [counter, setCounter] = useState(0);
 
 useEffect(() => {
   console.log('Effect has been run');
-}, [counter]);
+}, [counter]);  //added counter to array for 2nd argument - useEffect will run each time counter is clicked
  
  
 
