@@ -9,6 +9,8 @@ const APP_ID = '0792501f';
 const APP_KEY = 'fdf070695e8df1f0fe225dd600e33d00';
 
 const [recipes, setRecipes] = useState([]);
+const [search, setSearch] = useState('');
+
 
 
 useEffect( () => {
@@ -25,7 +27,7 @@ const getRecipes = async () => {
   return (
     <div className="App">
       <form className="search-form">
-        <input className="search-bar" type="text"/>
+        <input className="search-bar" type="text" value={search}/>
         <button className="search-button" type="submit">
           Search 
           </button>      
@@ -33,6 +35,7 @@ const getRecipes = async () => {
 
       {recipes.map(recipe =>(
         <Recipe 
+        key={recipe.recipe.label}
         title={recipe.recipe.label}  //props will be passed to component
         calories={recipe.recipe.calories}
         image={recipe.recipe.image}
