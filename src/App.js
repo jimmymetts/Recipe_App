@@ -25,13 +25,14 @@ const getRecipes = async () => {
 };
 
 const updateSearch = e => {
-  setSearch(e.target.value);
+  setSearch(e.target.value); 
+  console.log(search);
 }
 
   return (
     <div className="App">
       <form className="search-form">
-        <input className="search-bar" type="text" value={search} onChange={}/>
+        <input className="search-bar" type="text" value={search} onChange={updateSearch}/>
         <button className="search-button" type="submit">
           Search 
           </button>      
