@@ -35,6 +35,7 @@ const updateSearch = e => {
 const getSearch = e => {
   e.preventDefault();
   setQuery(search)
+  setSearch('');
 }
 
   return (
@@ -58,6 +59,7 @@ const getSearch = e => {
         title={recipe.recipe.label}  //props will be passed to component
         calories={recipe.recipe.calories}
         image={recipe.recipe.image}
+        ingredients={recipe.recipe.ingredients}
           />
       ))}
       
