@@ -1,10 +1,11 @@
 import React from 'react';
+import style from './recipe.module.css';
 
 
 const Recipe = ({title, calories, image, ingredients}) => {
     return(
-        <div className=>
-            <h1>{title}</h1>
+        <div>
+            <h1 className={style.recipe}>{title}</h1>
             <ol>
                  {ingredients.map(ingredient => (
                      <li>{ingredient.text}</li>
