@@ -60,7 +60,7 @@ const getSearch = e => {
         calories={recipe.recipe.calories}
         image={recipe.recipe.image}
         ingredients={recipe.recipe.ingredients}
-        fat={recipe.recipe.totalNutrients.fat}
+        fat={recipe.recipe.totalNutrients.}
           />
       ))}
       </div>
