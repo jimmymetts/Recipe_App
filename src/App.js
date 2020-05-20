@@ -43,7 +43,7 @@ const getSearch = e => {
       <br></br>
       <br></br>
       <br></br>
-    <center> <h1>Recipe Search App</h1></center>
+    <center> <h1>Recipe App</h1></center>
     <br></br>
 
      <form onSubmit={getSearch} className="search-form">
