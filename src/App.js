@@ -40,12 +40,14 @@ const getSearch = e => {
 
   return (
     <div className="App">
+      
       <form onSubmit={getSearch} className="search-form">
         <input 
         className="search-bar" 
         type="text" 
         value={search} 
         onChange={updateSearch}
+        placeholder="Search for a Recipe (example 'chicken')"
         />
 
         <button className="search-button" type="submit">
