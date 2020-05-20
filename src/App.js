@@ -40,9 +40,15 @@ const getSearch = e => {
 
   return (
     <div className="App">
-      
-      <form onSubmit={getSearch} className="search-form">
+      <br></br>
+      <br></br>
+      <br></br>
+    <center> <h1>Recipe Search App</h1></center>
+    <br></br>
+
+     <form onSubmit={getSearch} className="search-form">
         <input 
+        
         className="search-bar" 
         type="text" 
         value={search} 
